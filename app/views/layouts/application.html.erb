@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+
     <title>Bookers</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -10,6 +11,13 @@
   </head>
 
   <body>
+     <div class=flash>
+       <p>
+       <% flash.each do |message_type, message| %>
+       <%= message %>
+       <% end %>
+       </p>
+    </div>
     <%= yield %>
   </body>
 </html>
